@@ -6,18 +6,17 @@ using CalculatorLogic;
 using Microsoft.AspNetCore.Mvc;
 
 
-
 namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CalculatorController : ControllerBase
+    public class CalculatorSubtractController : ControllerBase
     {
-        //Takes numbers for addition
+        //Get numbers to subtract
         [HttpGet]
-        public double Add([FromQuery] double num1, [FromQuery] double num2)
+        public double Subtract([FromQuery] double num1, [FromQuery] double num2)
         {
-            return Class1.Addition(num1, num2);
+            return Class1.Subtraction(num1, num2);
         }
 
     }

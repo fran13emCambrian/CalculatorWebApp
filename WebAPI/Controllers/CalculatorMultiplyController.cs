@@ -5,19 +5,17 @@ using System.Threading.Tasks;
 using CalculatorLogic;
 using Microsoft.AspNetCore.Mvc;
 
-
-
 namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CalculatorController : ControllerBase
+    public class CalculatorMultiplyController : ControllerBase
     {
-        //Takes numbers for addition
+        //Get two numbers to multiply
         [HttpGet]
-        public double Add([FromQuery] double num1, [FromQuery] double num2)
+        public double Multiply([FromQuery] double num1, [FromQuery] double num2)
         {
-            return Class1.Addition(num1, num2);
+            return Class1.Multiplication(num1, num2);
         }
 
     }

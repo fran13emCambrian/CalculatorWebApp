@@ -4,20 +4,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using CalculatorLogic;
 using Microsoft.AspNetCore.Mvc;
-
-
+ 
 
 namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CalculatorController : ControllerBase
+    public class CalculatorDivideController : ControllerBase
     {
-        //Takes numbers for addition
-        [HttpGet]
-        public double Add([FromQuery] double num1, [FromQuery] double num2)
+      //Takes numbers for the division
+        public double Divide([FromQuery] double num1, [FromQuery] double num2)
         {
-            return Class1.Addition(num1, num2);
+            return Class1.Division(num1, num2);
         }
 
     }
